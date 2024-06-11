@@ -4,6 +4,7 @@ class MES:
 	def __init__(self):
 
 	def add_production_line(self, name):
+		self.__production_line = ProductionLine.ProductionLine(name)
 
 	def create_production_order(self, production_line_name, order_number: int, product_name, quantity):
 
