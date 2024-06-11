@@ -16,8 +16,9 @@ class ProductionOrder:
 		self.__status = "finished"
 
 	def produce(self, units):
+		self.__status = "producing"
 		i = 0
-		while i < self.__quantity:
+		while i < units:
 			self.start()
 
 	def get_production_efficiency(self):

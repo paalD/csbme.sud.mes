@@ -1,7 +1,8 @@
-import ProductionLine
+import ProductionLine, ProductionOrder
 
 class MES:
 	def __init__(self):
+		self.__production_line = 0
 
 	def add_production_line(self, name):
 		self.__production_line = ProductionLine.ProductionLine(name)
