@@ -7,7 +7,8 @@ class mes_utils:
 			if order.get_order_number() == order_number:
 				return order
 		raise ValueError(
-			f"Production order '{order_number}' does not exist in production line '{production_line.get_production_line_name()}'")
+			f"Production order '{order_number}' does not exist in production line "
+			f"'{production_line.get_production_line_name()}'")
 
 	@staticmethod
 	def calculate_production_efficiency(order):
