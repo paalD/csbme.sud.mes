@@ -7,21 +7,21 @@ class ProductionOrder:
 		self.__produced_units = 0
 
 	def get_order_number(self):
-		print(f"Returning Order Number")
+		# print(f"Returning Order Number")
 		return self.__order_number
 
 	def start(self):
-		print(f"-- Starting Production --")
+		# print(f"-- Starting Production --")
 		self.__status = "started"
 
 	def finish(self):
-		print(f"Finishing Order")
+		# print(f"Finishing Order")
 		self.__status = "finished"
 
 	def produce(self, units):
 		if self.__quantity - self.__produced_units < units:
 			raise ValueError(f"Units > Remaining")
-		print(f"Producing Order")
+		# print(f"Producing Order")
 		self.__status = "producing"
 		i = 0
 		while i < units:
@@ -29,5 +29,5 @@ class ProductionOrder:
 			self.__produced_units += 1
 
 	def get_production_progress(self):
-		print(f"Returning Production Progress")
+		# print(f"Returning Production Progress")
 		return round((self.__produced_units / self.__quantity) * 100, 2)

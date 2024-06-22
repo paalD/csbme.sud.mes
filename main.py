@@ -25,4 +25,4 @@ mes.finish_production_order("Produktionslinie 1", 1001)
 order = mes_utils.get_order_by_number(mes.get_production_line("Produktionslinie 1"), 1001)
 efficiency = mes_utils.calculate_production_progress(order)
 
-print(f"Die Produktionsfortschritt des Auftrags ist {efficiency}%.")
+print(f"Der Produktionsfortschritt des Auftrags ist {efficiency}%.")
