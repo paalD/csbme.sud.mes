@@ -10,7 +10,7 @@ class MES:
 
 	def add_production_line(self, name):
 		# print(f"Adding Production Line '{name}' to MES")
-		if self.validate_production_line(name) == False:
+		if not self.validate_production_line(name):
 			self.__production_lines.append(ProductionLine(name))
 		else:
 			raise ValueError(f"Production Line {name} already exists")
