@@ -10,7 +10,10 @@ class MES:
 
 	def add_production_line(self, name):
 		# print(f"Adding Production Line '{name}' to MES")
-		self.__production_lines.append(ProductionLine(name))
+		if self.validate_production_line(name) == False:
+			self.__production_lines.append(ProductionLine(name))
+		else:
+			raise ValueError(f"Production Line {name} already exists")
 
 	def create_production_order(self, production_line_name, order_number: int, product_name, quantity):
 		# print(f"Creating Production Order")
@@ -59,3 +62,10 @@ class MES:
 				return production_line
 			else:
 				raise ValueError(f"Production line '{production_line_name}' does not exist")
+
+	def validate_production_line(self, production_line_name):
+		for production_line in self.__production_lines:
+			if ProductionLine.get_production_line_name(production_line_name) == production_line_name:
+				return True
+			else:
+				return False
