@@ -1,3 +1,7 @@
+__author__ = "Dimitri Paal"
+__organization__ = "CSBME Bielefeld"
+__date__ = "25.08.2024"
+
 class ProductionOrder:
 	def __init__(self, order_number, product_name, quantity):
 		self.__order_number = order_number

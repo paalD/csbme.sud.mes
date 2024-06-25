@@ -1,3 +1,7 @@
+__author__ = "Dimitri Paal"
+__organization__ = "CSBME Bielefeld"
+__date__ = "25.08.2024"
+
 from ProductionLine import ProductionLine
 from ProductionOrder import ProductionOrder
 from mes_utils import mes_utils
