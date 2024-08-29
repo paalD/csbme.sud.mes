@@ -35,3 +35,14 @@ class ProductionOrder:
 	def get_production_progress(self):
 		# print(f"Returning Production Progress")
 		return round((self.__produced_units / self.__quantity) * 100, 2)
+
+	def __str__(self):
+		progress = self.get_production_progress()
+		return (
+			f"Order Number: {self.__order_number}, "
+			f"Product: {self.__product_name}, "
+			f"Quantity: {self.__quantity}, "
+			f"Produced Units: {self.__produced_units}, "
+			f"Status: {self.__status}, "
+			f"Progress: {progress}%"
+		)

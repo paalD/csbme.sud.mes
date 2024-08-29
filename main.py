@@ -1,9 +1,13 @@
+from Input import Input
 from MES import MES
 from mes_utils import mes_utils
+
 import time
 
 # Erstelle eine MES-Instanz
 mes = MES()
+
+#Input.start_input(mes)
 
 # Füge eine Produktionslinie hinzu
 mes.add_production_line("Produktionslinie 1")
@@ -26,3 +30,7 @@ order = mes_utils.get_order_by_number(mes.get_production_line("Produktionslinie 
 efficiency = mes_utils.calculate_production_progress(order)
 
 print(f"Der Produktionsfortschritt des Auftrags ist {efficiency}%.")
+
+production_lines = mes.get_production_lines()
+for line in production_lines:
+    print(line)
